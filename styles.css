@@ -115,12 +115,32 @@ li.aposta.verde {
     display: none; /* Inicialmente escondido */
 }
 
-/* Confetes */
-#confetes {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    pointer-events: none; /* Confetes não vão interferir na interação com outros elementos */
+function gerarConfetes() {
+    const container = document.getElementById("confetes");
+
+    // Quantidade de confetes
+    for (let i = 0; i < 100; i++) {
+        const confete = document.createElement("div");
+        confete.classList.add("confete");
+        // Estabelece uma posição e animação aleatória para cada confete
+        confete.style.left = `${Math.random() * 100}vw`;
+        confete.style.animationDelay = `${Math.random() * 2}s`;
+        confete.style.animationDuration = `${Math.random() * 3 + 3}s`; // Tempo aleatório para a animação
+
+        container.appendChild(confete);
+    }
 }
+
+// Função para mostrar a mensagem de parabéns
+function mostrarParabens() {
+    document.getElementById("parabens-message").style.display = "block";
+    gerarConfetes();
+}
+
+// Adicionar um evento para disparar a mensagem de parabéns
+document.getElementById("mostrar-apostas").addEventListener("click", () => {
+    const apostador = document.getElementById("apostador").value;
+    if (apostador) {
+        mostrarParabens();
+    }
+});
