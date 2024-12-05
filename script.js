@@ -58,21 +58,22 @@ const apostas = {
     ]
 };
 
-// Mostrar as apostas do apostador selecionado
+// Mostra as apostas do apostador selecionado
 document.getElementById("mostrar-apostas").addEventListener("click", () => {
     const apostador = document.getElementById("apostador").value;
     const container = document.getElementById("apostas");
     const apostasContainer = document.getElementById("apostas-container");
 
     if (apostador) {
-        container.innerHTML = `<h2>${apostador}</h2>`;
+        container.innerHTML = `<h2>Apostas de ${apostador}</h2>`;
         const lista = document.createElement("ul");
 
         apostas[apostador].forEach(aposta => {
             const item = document.createElement("li");
             item.textContent = aposta;
+            item.classList.add("aposta");
 
-            // Alternar cores ao clicar
+            // Alterna as cores ao clicar
             let clickCount = 0;
             item.addEventListener("click", () => {
                 clickCount++;
@@ -82,7 +83,7 @@ document.getElementById("mostrar-apostas").addEventListener("click", () => {
                 } else if (clickCount === 2) {
                     item.classList.add("verde");
                     item.classList.remove("vermelho");
-                    clickCount = 0; // Resetar o contador
+                    clickCount = 0; // Reseta o contador
                 }
             });
 
