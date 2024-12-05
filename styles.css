@@ -1,55 +1,83 @@
-/* Estilo geral */
 body {
     font-family: Arial, sans-serif;
-    margin: 20px;
-    background-image: url('https://i.postimg.cc/T1ftVmFH/Post-para-Instagram-de-investimentos-com-notas-de-100-reais-simples-azul-8.png'); /* Substitua 'fundo.jpg' pelo nome da sua imagem */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: url('https://i.postimg.cc/T1ftVmFH/Post-para-Instagram-de-investimentos-com-notas-de-100-reais-simples-azul-8.png') no-repeat center center fixed;
     background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
-    color: #fff; /* Cor do texto */
-    text-shadow: 1px 1px 2px #000; /* Sombra no texto para melhorar a legibilidade */
+    color: white;
 }
 
-h1 {
+#seletor {
     text-align: center;
-    color: #fff;
+    background: rgba(0, 0, 0, 0.7);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 
-h2 {
-    color: #ffd700; /* Cor dourada para os subtítulos */
+#seletor h1 {
+    margin-bottom: 20px;
 }
 
-.apostas {
-    max-width: 600px;
-    margin: 0 auto;
+#seletor select,
+#seletor button {
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    margin: 10px 0;
+    width: 100%;
+    box-sizing: border-box;
 }
 
-ul {
-    list-style: none;
+#seletor button {
+    background-color: #28a745;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#seletor button:hover {
+    background-color: #218838;
+}
+
+.hidden {
+    display: none;
+}
+
+#apostas-container {
+    display: none;
+    text-align: center;
+    color: black;
+    background: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+#apostas ul {
+    list-style-type: none;
     padding: 0;
 }
 
-li.aposta {
-    background-color: rgba(255, 255, 255, 0.8); /* Fundo semi-transparente */
+#apostas ul li {
     padding: 10px;
     margin: 5px 0;
-    border: 1px solid #ddd;
-    text-align: center;
+    border: 1px solid #ccc;
+    border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s ease;
-    color: #000;
 }
 
-li.aposta:hover {
-    background-color: rgba(240, 240, 240, 0.9);
+#apostas ul li.verde {
+    background-color: #28a745;
+    color: white;
 }
 
-li.aposta.vermelho {
-    background-color: #ff6b6b;
-    color: #fff;
-}
-
-li.aposta.verde {
-    background-color: #51cf66;
-    color: #fff;
+#apostas ul li.vermelho {
+    background-color: #dc3545;
+    color: white;
 }
