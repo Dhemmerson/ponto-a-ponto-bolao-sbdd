@@ -5,48 +5,55 @@ const apostas = {
         "Fabricio saiu com Pablo",
         "Dhemmerson saiu com Jhon",
         "Jhon saiu com Maria",
-        "Enzo saiu com Nayane"
+        "Enzo saiu com Nayane",
+        "Meire saiu com Marcos"
     ],
     Carlos: [
         "Maryssa saiu com Enzo",
         "Fabricio saiu com Marcos",
         "Dhemmerson saiu com Emilly",
         "Jhon saiu com Nayane",
-        "Enzo saiu com Jhon"
+        "Enzo saiu com Jhon",
+        "Meire saiu com Victor"
     ],
     Fabricio: [
         "Maryssa saiu com Meire",
         "Carlos saiu com Joyce",
         "Dhemmerson saiu com Jack",
         "Jhon saiu com Marcos",
-        "Enzo saiu com Emilly"
+        "Enzo saiu com Emilly",
+        "Meire saiu com Victor"
     ],
     Dhemmerson: [
         "Maryssa saiu com Emilly",
         "Carlos saiu com Dhemmerson",
         "Fabricio saiu com Enzo",
         "Jhon saiu com Nayane",
-        "Enzo saiu com Joyce"
+        "Enzo saiu com Joyce",
+        "Meire saiu com Jack"
     ],
     Jhon: [
         "Maryssa saiu com Enzo",
         "Carlos saiu com Fabricio",
         "Fabricio saiu com Marcos",
         "Dhemmerson saiu com Victor",
-        "Enzo saiu com Jack"
+        "Enzo saiu com Jack",
+        "Meire saiu com Jhon"
     ],
     Enzo: [
         "Maryssa saiu com Enzo",
         "Carlos saiu com Fabricio",
         "Fabricio saiu com Joyce",
         "Dhemmerson saiu com Nayane",
-        "Jhon saiu com Emilly"
+        "Jhon saiu com Emilly",
+        "Meire saiu com Victor"
     ],
     Meire: [
         "Maryssa saiu com Nayane",
         "Carlos saiu com Emilly",
         "Dhemmerson saiu com Maria",
         "Jhon saiu com Carlos",
+        "Fabricio saiu com Dhemmerson",
         "Enzo saiu com Fabricio"
     ]
 };
