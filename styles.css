@@ -1,0 +1,49 @@
+/* styles.css */
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    background-color: #f4f4f4;
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+}
+
+h2 {
+    color: #555;
+}
+
+.apostas {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li.aposta {
+    background-color: #ffffff;
+    padding: 10px;
+    margin: 5px 0;
+    border: 1px solid #ddd;
+    text-align: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+li.aposta:hover {
+    background-color: #f0f0f0;
+}
+
+li.aposta.vermelho {
+    background-color: #ff6b6b;
+    color: #fff;
+}
+
+li.aposta.verde {
+    background-color: #51cf66;
+    color: #fff;
+}
