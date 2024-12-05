@@ -57,6 +57,8 @@ li.aposta.verde {
     background-color: #51cf66;
     color: #fff;
 }
+
+/* Estilo do seletor */
 #seletor {
     position: absolute;
     top: 50%;
