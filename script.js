@@ -65,6 +65,18 @@ document.getElementById("mostrar-apostas").addEventListener("click", () => {
     const apostador = document.getElementById("apostador").value;
     const container = document.getElementById("apostas");
     const apostasContainer = document.getElementById("apostas-container");
+    const parabensMessage = document.getElementById("parabens-message");
+
+    // Verifica se a data e hora atual são válidas para mostrar a mensagem
+    const hoje = new Date();
+    const evento = new Date(2024, 11, 13, 16, 0, 0); // 13/12/2024 às 16:00
+    const agora = new Date();
+
+    // Verifica se a data é o evento
+    const eventoValido = hoje.getDate() === evento.getDate() &&
+                          hoje.getMonth() === evento.getMonth() &&
+                          hoje.getFullYear() === evento.getFullYear() &&
+                          agora >= evento;
 
     if (apostador) {
         console.log("Apostas encontradas:", apostas[apostador]); // Debug para verificar os dados
@@ -88,6 +100,18 @@ document.getElementById("mostrar-apostas").addEventListener("click", () => {
                     item.classList.remove("verde");
                     clickCount = 0; // Reseta o contador
                 }
+
+                // Verifica se todas as apostas estão verdes
+                const apostasVerde = Array.from(document.querySelectorAll('.aposta')).every(aposta => aposta.classList.contains('verde'));
+
+                // Se todas as apostas estão verdes e o evento é válido
+                if (apostasVerde && eventoValido) {
+                    // Exibir a mensagem de parabéns
+                    parabensMessage.style.display = 'block';
+
+                    // Disparar confetes
+                    confetti();
+                }
             });
 
             lista.appendChild(item);
@@ -100,3 +124,13 @@ document.getElementById("mostrar-apostas").addEventListener("click", () => {
         alert("Por favor, selecione um apostador.");
     }
 });
+
+// Função para disparar confetes
+function confetti() {
+    // Disparando confetes usando a biblioteca canvas-confetti
+    confetti({
+        particleCount: 200,
+        spread: 70,
+        origin: { y: 0.6 }
+    });
+}
