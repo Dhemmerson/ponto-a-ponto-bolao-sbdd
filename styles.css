@@ -12,29 +12,40 @@ body {
 }
 
 #seletor {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     text-align: center;
-    background: rgba(0, 0, 0, 0.7);
+    background: rgba(0, 0, 0, 0.8);
     padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    border-radius: 15px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.5);
+    width: 90%;
+    max-width: 400px;
 }
 
 #seletor h1 {
     margin-bottom: 20px;
+    font-size: 1.5em;
 }
 
-#seletor select,
-#seletor button {
+#seletor select {
+    width: 100%;
     padding: 10px;
-    font-size: 16px;
+    margin-bottom: 15px;
     border: none;
     border-radius: 5px;
-    margin: 10px 0;
-    width: 100%;
+    font-size: 16px;
     box-sizing: border-box;
 }
 
 #seletor button {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
     background-color: #28a745;
     color: white;
     cursor: pointer;
@@ -44,7 +55,6 @@ body {
 #seletor button:hover {
     background-color: #218838;
 }
-
 .hidden {
     display: none;
 }
