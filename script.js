@@ -1,46 +1,3 @@
-document.getElementById("mostrar-apostas").addEventListener("click", () => {
-    console.log("Botão clicado!");
-    const apostador = document.getElementById("apostador").value;
-    console.log("Apostador selecionado:", apostador);
-    
-    const container = document.getElementById("apostas");
-    const apostasContainer = document.getElementById("apostas-container");
-
-    if (apostador) {
-        console.log("Apostas encontradas:", apostas[apostador]); // Verificar se está puxando os dados
-        container.innerHTML = `<h2>Apostas de ${apostador}</h2>`;
-        const lista = document.createElement("ul");
-
-        apostas[apostador].forEach(aposta => {
-            const item = document.createElement("li");
-            item.textContent = aposta;
-            item.classList.add("aposta");
-
-            let clickCount = 0;
-            item.addEventListener("click", () => {
-                clickCount++;
-                if (clickCount === 1) {
-                    item.classList.add("vermelho");
-                    item.classList.remove("verde");
-                } else if (clickCount === 2) {
-                    item.classList.add("verde");
-                    item.classList.remove("vermelho");
-                    clickCount = 0;
-                }
-            });
-
-            lista.appendChild(item);
-        });
-
-        container.appendChild(lista);
-        document.getElementById("seletor").classList.add("hidden");
-        apostasContainer.classList.remove("hidden");
-    } else {
-        alert("Por favor, selecione um apostador.");
-    }
-});
-
-
 // Dados das apostas
 const apostas = {
     Maryssa: [
@@ -101,13 +58,16 @@ const apostas = {
     ]
 };
 
-// Mostra as apostas do apostador selecionado
+// Lógica para mostrar as apostas
 document.getElementById("mostrar-apostas").addEventListener("click", () => {
+    console.log("Botão clicado!");
+
     const apostador = document.getElementById("apostador").value;
     const container = document.getElementById("apostas");
     const apostasContainer = document.getElementById("apostas-container");
 
     if (apostador) {
+        console.log("Apostas encontradas:", apostas[apostador]); // Debug para verificar os dados
         container.innerHTML = `<h2>Apostas de ${apostador}</h2>`;
         const lista = document.createElement("ul");
 
