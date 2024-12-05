@@ -2,21 +2,38 @@
 body {
     font-family: Arial, sans-serif;
     margin: 20px;
-    background-image: url('https://i.postimg.cc/T1ftVmFH/Post-para-Instagram-de-investimentos-com-notas-de-100-reais-simples-azul-8.png'); /* Substitua 'fundo.jpg' pelo nome da sua imagem */
+    background-image: url('fundo.jpg'); /* Substitua pelo caminho da sua imagem */
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
-    color: #fff; /* Cor do texto */
-    text-shadow: 1px 1px 2px #000; /* Sombra no texto para melhorar a legibilidade */
+    color: #fff;
+    text-shadow: 1px 1px 2px #000; /* Sombra no texto */
+}
+
+.hidden {
+    display: none;
+}
+
+#seletor {
+    text-align: center;
+    margin-top: 50px;
+}
+
+#apostador {
+    padding: 10px;
+    font-size: 16px;
+}
+
+#mostrar-apostas {
+    padding: 10px 20px;
+    font-size: 16px;
+    margin-top: 10px;
+    cursor: pointer;
 }
 
 h1 {
     text-align: center;
     color: #fff;
-}
-
-h2 {
-    color: #ffd700; /* Cor dourada para os subtítulos */
 }
 
 .apostas {
