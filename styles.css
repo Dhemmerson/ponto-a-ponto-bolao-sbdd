@@ -106,3 +106,21 @@ li.aposta.verde {
     margin-top: 20px;
     text-align: center;
 }
+/* Adicionando estilo para a mensagem de Parabéns */
+#parabens-message {
+    text-align: center;
+    color: #ffd700; /* Cor dourada */
+    font-size: 36px;
+    margin-top: 30px;
+    display: none; /* Inicialmente escondido */
+}
+
+/* Confetes */
+#confetes {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none; /* Confetes não vão interferir na interação com outros elementos */
+}
