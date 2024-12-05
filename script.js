@@ -69,7 +69,7 @@ document.getElementById("mostrar-apostas").addEventListener("click", () => {
 
     // Verifica se a data e hora atual são válidas para mostrar a mensagem
     const hoje = new Date();
-const evento = new Date(2024, 11, 13); // 13/12/2024, sem hora definida
+const evento = new Date(2024, 11, 05); // 13/12/2024, sem hora definida
 const agora = new Date();
 
 // Verifica se o evento é hoje e se a hora atual é igual ou posterior ao evento
