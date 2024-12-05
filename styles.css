@@ -1,1 +1,60 @@
+/* Estilo geral */
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    background-image: url('https://i.postimg.cc/T1ftVmFH/Post-para-Instagram-de-investimentos-com-notas-de-100-reais-simples-azul-8.png'); /* Substitua 'fundo.jpg' pelo nome da sua imagem */
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    color: #fff; /* Cor do texto */
+    text-shadow: 1px 1px 2px #000; /* Sombra no texto para melhorar a legibilidade */
+}
+
+h1 {
+    text-align: center;
+    color: #fff;
+}
+
+h2 {
+    color: #ffd700; /* Cor dourada para os subtítulos */
+}
+
+.hidden {
+    display: none;
+}
+
+.apostas {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li.aposta {
+    background-color: rgba(255, 255, 255, 0.8); /* Fundo semi-transparente */
+    padding: 10px;
+    margin: 5px 0;
+    border: 1px solid #ddd;
+    text-align: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    color: #000;
+}
+
+li.aposta:hover {
+    background-color: rgba(240, 240, 240, 0.9);
+}
+
+li.aposta.vermelho {
+    background-color: #ff6b6b;
+    color: #fff;
+}
+
+li.aposta.verde {
+    background-color: #51cf66;
+    color: #fff;
+}
 
