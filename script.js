@@ -127,10 +127,12 @@ document.getElementById("mostrar-apostas").addEventListener("click", () => {
 
 // Função para disparar confetes
 function confetti() {
-    // Disparando confetes usando a biblioteca canvas-confetti
+    // Disparando confetes para cima com gravidade negativa
     confetti({
         particleCount: 200,
         spread: 70,
-        origin: { y: 0.6 }
+        origin: { y: 0 }, // Mudando a origem para o topo da tela
+        angle: 90,         // Garantir que os confetes se movam para cima
+        gravity: -0.3      // Definir uma gravidade negativa para os confetes subirem
     });
 }
