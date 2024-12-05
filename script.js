@@ -43,11 +43,11 @@ const apostas = {
         "Jhon saiu com Emilly"
     ],
     Meire: [
-        "Maryssa saiu com Enzo",
-        "Carlos saiu com Fabricio",
-        "Fabricio saiu com Joyce",
-        "Dhemmerson saiu com Nayane",
-        "Jhon saiu com Emilly"
+        "Maryssa saiu com Nayane",
+        "Carlos saiu com Emilly",
+        "Dhemmerson saiu com Maria",
+        "Jhon saiu com Carlos",
+        "Enzo saiu com Fabricio"
 };
 
 // Mostra as apostas do apostador selecionado
