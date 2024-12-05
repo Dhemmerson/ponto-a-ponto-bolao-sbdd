@@ -41,13 +41,7 @@ const apostas = {
         "Fabricio saiu com Joyce",
         "Dhemmerson saiu com Nayane",
         "Jhon saiu com Emilly"
-    ],
-    Meire: [
-        "Maryssa saiu com Nayane",
-        "Carlos saiu com Emilly",
-        "Dhemmerson saiu com Maria",
-        "Jhon saiu com Carlos",
-        "Enzo saiu com Fabricio"
+    ]
 };
 
 // Mostra as apostas do apostador selecionado
@@ -65,17 +59,18 @@ document.getElementById("mostrar-apostas").addEventListener("click", () => {
             item.textContent = aposta;
             item.classList.add("aposta");
 
-            // Alterna as cores entre verde e vermelho ao clicar
-            let isGreen = false;
+            // Alterna as cores ao clicar
+            let clickCount = 0;
             item.addEventListener("click", () => {
-                if (isGreen) {
+                clickCount++;
+                if (clickCount === 1) {
                     item.classList.add("vermelho");
                     item.classList.remove("verde");
-                } else {
+                } else if (clickCount === 2) {
                     item.classList.add("verde");
                     item.classList.remove("vermelho");
+                    clickCount = 0; // Reseta o contador
                 }
-                isGreen = !isGreen; // Alterna o estado
             });
 
             lista.appendChild(item);
