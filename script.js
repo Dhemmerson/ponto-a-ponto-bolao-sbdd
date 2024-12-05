@@ -69,14 +69,14 @@ document.getElementById("mostrar-apostas").addEventListener("click", () => {
 
     // Verifica se a data e hora atual são válidas para mostrar a mensagem
     const hoje = new Date();
-    const evento = new Date(2024, 11, 13, 14, 0, 0); // 13/12/2024 às 16:00
-    const agora = new Date();
+const evento = new Date(2024, 11, 13); // 13/12/2024, sem hora definida
+const agora = new Date();
 
-    // Verifica se a data é o evento
-    const eventoValido = hoje.getDate() === evento.getDate() &&
-                          hoje.getMonth() === evento.getMonth() &&
-                          hoje.getFullYear() === evento.getFullYear() &&
-                          agora >= evento;
+// Verifica se o evento é hoje e se a hora atual é igual ou posterior ao evento
+const eventoValido = hoje.getDate() === evento.getDate() &&
+                      hoje.getMonth() === evento.getMonth() &&
+                      hoje.getFullYear() === evento.getFullYear() &&
+                      agora >= evento;
 
     if (apostador) {
         console.log("Apostas encontradas:", apostas[apostador]); // Debug para verificar os dados
