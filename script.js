@@ -81,11 +81,11 @@ document.getElementById("mostrar-apostas").addEventListener("click", () => {
             item.addEventListener("click", () => {
                 clickCount++;
                 if (clickCount === 1) {
-                    item.classList.add("vermelho");
-                    item.classList.remove("verde");
-                } else if (clickCount === 2) {
                     item.classList.add("verde");
                     item.classList.remove("vermelho");
+                } else if (clickCount === 2) {
+                    item.classList.add("vermelho");
+                    item.classList.remove("verde");
                     clickCount = 0; // Reseta o contador
                 }
             });
